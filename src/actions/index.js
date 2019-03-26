@@ -1,5 +1,5 @@
-import { TEST } from '../actionTypes'
+import { TESTREQUEST } from '../actionTypes'
 
 export function addTest (payload) {
-  return { type: TEST, payload }
+  return { type: TESTREQUEST, payload }
 }

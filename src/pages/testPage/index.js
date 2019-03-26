@@ -5,15 +5,22 @@ import './style.css'
 
 class Test extends Component {
   handlerClick = () => {
-    this.props.addTest('123123')
-    console.log(this.props.test)
+    this.props.addTest()
   }
 
   render () {
+    let {data} =this.props.test
     return (
+      <>
       <div onClick={this.handlerClick} className='main__test-buton'>
         TEST BUTTON
       </div>
+      <div>
+        {data&& data.map((item,index) => {
+          return <div>{item.title}</div>
+        })}
+      </div>
+      </>
     )
   }
 }

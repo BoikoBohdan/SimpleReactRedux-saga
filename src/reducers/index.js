@@ -1,15 +1,7 @@
-import { TEST } from '../actionTypes'
+import { combineReducers } from 'redux';
 
-const initialState = {
-  test: []
-}
-function rootReducer (state = initialState, action) {
-  if (action.type === TEST) {
-    return Object.assign({}, state, {
-      test: state.test.concat(action.payload)
-    })
-  }
+import { test } from './test';
 
-  return state
-}
-export default rootReducer
+export default combineReducers({
+  test
+});
